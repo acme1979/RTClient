@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{157FD541-EAAA-4387-9307-62E8BB15DEC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkStation</RootNamespace>
+    <AssemblyName>WorkStation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\WorkStation.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;E:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;E:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WorkStation.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;E:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;E:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelReport">
+      <HintPath>..\RSNClient\bin\Debug\dll\ExcelReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport">
+      <HintPath>..\..\Common\PrintLab\bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BarTender, Version=10.1.3.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\RSNClient\bin\Debug\Interop.BarTender.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\RSNClient\bin\Debug\dll\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RSNClient\bin\Debug\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="system.core">
+      <HintPath>c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.0\system.core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.2774.19990, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBSetupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBSetupFrm.designer.cs">
+      <DependentUpon>DBSetupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcuLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EcuLabel.Designer.cs">
+      <DependentUpon>EcuLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownload.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileDownload.Designer.cs">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPYQuerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPYQuerry.Designer.cs">
+      <DependentUpon>FPYQuerry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunClass\CGetEleScaleWeight.cs" />
+    <Compile Include="FunClass\CJsonRoot.cs" />
+    <Compile Include="FunClass\Computer.cs" />
+    <Compile Include="FunClass\CSerialPortComm.cs" />
+    <Compile Include="FunClass\CParamSetting.cs" />
+    <Compile Include="FunClass\CScanResult.cs" />
+    <Compile Include="FunClass\CTelnet.cs" />
+    <Compile Include="FunClass\CWorkFlowControlHelper.cs" />
+    <Compile Include="FunClass\ErpMoInfo.cs" />
+    <Compile Include="FunClass\FileTransferService.cs" />
+    <Compile Include="FunClass\ICommonWorkStationCtl.cs" />
+    <Compile Include="FunClass\ILabelPrintWorkStation.cs" />
+    <Compile Include="FunClass\OperateResult.cs" />
+    <Compile Include="FunClass\ReadExcel.cs" />
+    <Compile Include="FunClass\SaveLogs.cs" />
+    <Compile Include="FunClass\SecurityQueue.cs" />
+    <Compile Include="FunClass\SoundPlayerHelp.cs" />
+    <Compile Include="LabelPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelPrint.Designer.cs">
+      <DependentUpon>LabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Packing.Designer.cs">
+      <DependentUpon>Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScanMultiProductWSCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScanMultiProductWSCtl.designer.cs">
+      <DependentUpon>ScanMultiProductWSCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFrm.Designer.cs">
+      <DependentUpon>SetupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SnQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SnQuery.Designer.cs">
+      <DependentUpon>SnQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskBurnIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskBurnIn.Designer.cs">
+      <DependentUpon>TaskBurnIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskICT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskICT.Designer.cs">
+      <DependentUpon>TaskICT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskLaserEngravingMachine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskLaserEngravingMachine.Designer.cs">
+      <DependentUpon>TaskLaserEngravingMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskX-Ray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskX-Ray.Designer.cs">
+      <DependentUpon>TaskX-Ray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadAOI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadAOI.Designer.cs">
+      <DependentUpon>TimerReadAOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadECU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadECU.Designer.cs">
+      <DependentUpon>TimerReadECU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadFCT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadFCT.Designer.cs">
+      <DependentUpon>TimerReadFCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadSPI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadSPI.Designer.cs">
+      <DependentUpon>TimerReadSPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadStencil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadStencil.Designer.cs">
+      <DependentUpon>TimerReadStencil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerReadWSCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimerReadWSCtl.Designer.cs">
+      <DependentUpon>TimerReadWSCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpLoadFile_LW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpLoadFile_LW.Designer.cs">
+      <DependentUpon>UpLoadFile_LW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLimitConfirmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLimitConfirmFrm.designer.cs">
+      <DependentUpon>UserLimitConfirmFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkStationCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkStationCtl.Designer.cs">
+      <DependentUpon>WorkStationCtl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBSetupFrm.resx">
+      <DependentUpon>DBSetupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcuLabel.resx">
+      <DependentUpon>EcuLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDownload.resx">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPYQuerry.resx">
+      <DependentUpon>FPYQuerry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelPrint.resx">
+      <DependentUpon>LabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing.resx">
+      <DependentUpon>Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanMultiProductWSCtl.resx">
+      <DependentUpon>ScanMultiProductWSCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupFrm.resx">
+      <DependentUpon>SetupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SnQuery.resx">
+      <DependentUpon>SnQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskBurnIn.resx">
+      <DependentUpon>TaskBurnIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskICT.resx">
+      <DependentUpon>TaskICT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskLaserEngravingMachine.resx">
+      <DependentUpon>TaskLaserEngravingMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskX-Ray.resx">
+      <DependentUpon>TaskX-Ray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadAOI.resx">
+      <DependentUpon>TimerReadAOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadECU.resx">
+      <DependentUpon>TimerReadECU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadFCT.resx">
+      <DependentUpon>TimerReadFCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadSPI.resx">
+      <DependentUpon>TimerReadSPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadStencil.resx">
+      <DependentUpon>TimerReadStencil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerReadWSCtl.resx">
+      <DependentUpon>TimerReadWSCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpLoadFile_LW.resx">
+      <DependentUpon>UpLoadFile_LW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLimitConfirmFrm.resx">
+      <DependentUpon>UserLimitConfirmFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkStationCtl.resx">
+      <DependentUpon>WorkStationCtl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseModel\BaseModel.csproj">
+      <Project>{E41F2ED6-B257-4354-A774-EF6E5D06984C}</Project>
+      <Name>BaseModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigHelper\ConfigHelper.csproj">
+      <Project>{F894674A-7622-449A-8B95-230B13D7AA25}</Project>
+      <Name>ConfigHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)AfterBuilding.bat $(SolutionDir) $(ProjectName) $(TargetName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
